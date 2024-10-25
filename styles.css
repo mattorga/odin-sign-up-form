@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@font-face {
+    font-family: "Norse Bold";
+    src: url("assets/Norse-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  --left-to-right-margin: 100px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  background: #eaeaea;
+  font-family: 'Roboto', sans-serif;
+}
+
+.left {
+  position: relative;
+  background-image: url("assets/background-image.jpg");
+  background-size: cover;
+  flex-basis: calc(100%/1.5);
+}
+
+.logo{
+  font-family: "Norse Bold", sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 8px 0px black;
+  font-size: 80px;
+  color:white;
+  margin-top: 150px;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-weight: bold;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  justify-content: center;
+  flex-basis: calc(100%/1);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  background: white;
+	box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  padding-left: var(--left-to-right-margin);
+  margin-bottom: 24px;
+  gap: 24px;
+}
+
+.right>.hero {
+  margin-left: var(--left-to-right-margin);
+  margin-right: var(--left-to-right-margin);
+}
+
+.hero {
+  font-size: x-large;
+}
+
+.fields {
+  display: flex;
+  gap: 48px;
+}
+
+.fields-left, .fields-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-size: x-small;
+}
+
+input {
+  border: solid;
+  border-width: 1px;
+  border-color: #E5E7EB;
+  padding: 5px;
+  border-radius: 5px;
+  width: 15vw;
+}
+
+input:focus {
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+input:not(:placeholder-shown):invalid{
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
+
+button {
+  margin-left: var(--left-to-right-margin);
+  background-color: #596D48;
+  color: white;
+  padding: 16px 48px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.2);
+  font-size: medium;
+}
+
+.login {
+  margin-left: var(--left-to-right-margin);
+}
+
+a {
+  color: #596D48;
+  text-decoration: none;
+}
+
+#credits {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  color: white;
+}
